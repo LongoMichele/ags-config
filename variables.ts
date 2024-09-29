@@ -40,13 +40,13 @@ export const styles = [
   { name: "window-border-radius", value: "4px" },
 
   // Taskbar
-  { name: "taskbar-bg", value: "#1C1E22" },
+  { name: "taskbar-bg", value: "transparent" },
   { name: "taskbar-icon-active", value: "#3C4043" },
   { name: "taskbar-icon-inactive", value: "#4B545C" },
-  { name: "taskbar-padding", value: "12px 16px" },
-  { name: "taskbar-margin", value: "8px" },
-  { name: "taskbar-border", value: "2px solid #3A3F47" },
-  { name: "taskbar-border-radius", value: "4px" },
+  { name: "taskbar-padding", value: "10px 10px 0" },
+  { name: "taskbar-margin", value: "0px" },
+  { name: "taskbar-border", value: "0px" },
+  { name: "taskbar-border-radius", value: "0px" },
 
   // Tooltips e Menu
   { name: "tooltip-bg", value: "#1C1E22" },
