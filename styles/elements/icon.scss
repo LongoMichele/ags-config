@@ -1,0 +1,19 @@
+@use "sass:map";
+
+$slug: "icon";
+$sizes: "xs", "s", "m", "l", "xl";
+$icons: (
+  "xs": $icon-xs,
+  "s": $icon-s,
+  "m": $icon-m,
+  "l": $icon-l,
+  "xl": $icon-xl,
+);
+
+.#{$slug} {
+  @each $size in $sizes {
+    &-#{$size} image {
+      font-size: map.get($icons, $size);
+    }
+  }
+}

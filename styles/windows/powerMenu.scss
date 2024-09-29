@@ -1,0 +1,15 @@
+$btn-size: 50px;
+$btn-spacing: 20px;
+$icon-size: 40px;
+
+.powermenu {
+  .button {
+    min-width: $btn-size;
+    min-height: $btn-size;
+    margin: 0 $btn-spacing;
+
+    image {
+      font-size: $icon-size;
+    }
+  }
+}

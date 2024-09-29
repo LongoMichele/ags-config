@@ -1,0 +1,48 @@
+@use "sass:map";
+
+$slug: "workspace";
+$statuses: "occupied", "active";
+$props: (
+  "default": (
+    background: $ws-inactive,
+    width: $ws-width-inactive,
+    height: $ws-height-inactive,
+  ),
+  "occupied": (
+    background: $ws-occupied,
+    width: $ws-width-occupied,
+    height: $ws-height-occupied,
+  ),
+  "active": (
+    background: $ws-active,
+    width: $ws-width-active,
+    height: $ws-height-active,
+  ),
+);
+
+.#{$slug} {
+  $baseProps: map-get(
+    $map: $props,
+    $key: "default",
+  );
+  font-size: 0;
+  background: map-get($map: $baseProps, $key: background);
+  min-width: map-get($map: $baseProps, $key: width);
+  min-height: map-get($map: $baseProps, $key: height);
+  border-radius: $ws-border-radius;
+  margin: $ws-spacing;
+  transition: $transition-short;
+  //   transition: 0s;
+
+  @each $status in $statuses {
+    $statusProps: map-get(
+      $map: $props,
+      $key: $status,
+    );
+    &--#{$status} {
+      background: map-get($map: $statusProps, $key: background);
+      min-width: map-get($map: $statusProps, $key: width);
+      min-height: map-get($map: $statusProps, $key: height);
+    }
+  }
+}

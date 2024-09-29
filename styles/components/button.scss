@@ -1,0 +1,70 @@
+@use "sass:map";
+
+$slug: "button";
+$sizes: "xs", "s", "m", "l", "xl";
+$props: (
+  "xs": (
+    padding: $button-padding-xs,
+    font: $font-s-small,
+    icon: $icon-xs,
+  ),
+  "s": (
+    padding: $button-padding-s,
+    font: $font-s-small,
+    icon: $icon-s,
+  ),
+  "m": (
+    padding: $button-padding-m,
+    font: $font-s-medium,
+    icon: $icon-m,
+  ),
+  "l": (
+    padding: $button-padding-l,
+    font: $font-s-large,
+    icon: $icon-l,
+  ),
+  "xl": (
+    padding: $button-padding-xl,
+    font: $font-s-xlarge,
+    icon: $icon-xl,
+  ),
+);
+
+.#{$slug} {
+  $baseProps: map-get(
+    $map: $props,
+    $key: "m",
+  );
+  font-size: map-get($map: $baseProps, $key: font);
+  color: $button-text;
+  background-color: $button-inactive;
+  padding: map-get($map: $baseProps, $key: padding);
+  border: $button-border;
+  border-radius: $button-border-radius;
+  transition: $transition-short;
+
+  image {
+    font-size: map-get($map: $baseProps, $key: icon);
+    color: $button-text;
+  }
+
+  @each $size in $sizes {
+    $sizeProps: map-get(
+      $map: $props,
+      $key: $size,
+    );
+    &--#{$size} {
+      font-size: map-get($map: $sizeProps, $key: font);
+      padding: map-get($map: $sizeProps, $key: padding);
+
+      image {
+        font-size: map-get($map: $sizeProps, $key: icon);
+      }
+    }
+  }
+
+  &:hover {
+    background-color: $button-active;
+    border-color: $button-border-active;
+  }
+}

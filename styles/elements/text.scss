@@ -1,0 +1,18 @@
+@use "sass:map";
+
+$slug: "text";
+$sizes: "s", "m", "l", "xl";
+$fonts: (
+  "s": $font-s-small,
+  "m": $font-s-medium,
+  "l": $font-s-large,
+  "xl": $font-s-xlarge,
+);
+
+.#{$slug} {
+  @each $size in $sizes {
+    &-#{$size} {
+      font-size: map.get($fonts, $size);
+    }
+  }
+}

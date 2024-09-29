@@ -1,0 +1,28 @@
+@use "sass:map";
+
+$slug: "window";
+$sizes: "xs", "s", "m", "l", "xl";
+$borders: (
+  "xs": $window-padding-xs,
+  "s": $window-padding-s,
+  "m": $window-padding-m,
+  "l": $window-padding-l,
+  "xl": $window-padding-xl,
+);
+
+.#{$slug} {
+  background: $window-bg-alpha;
+
+  @each $size in $sizes {
+    &.#{$slug}--#{$size} .#{$slug}__inner {
+      border-width: 2px;
+      padding: map.get($borders, $size);
+    }
+  }
+
+  &__inner {
+    background-color: $window-bg;
+    border: $window-border;
+    border-radius: $window-border-radius;
+  }
+}

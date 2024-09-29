@@ -1,0 +1,23 @@
+@use "sass:map";
+
+$slug: "container";
+$sizes: "xs", "s", "m", "l", "xl";
+$paddings: (
+  "xs": $container-padding-xs,
+  "s": $container-padding-s,
+  "m": $container-padding-m,
+  "l": $container-padding-l,
+  "xl": $container-padding-xl,
+);
+
+.#{$slug} {
+  background-color: $container-bg;
+  border: $container-border;
+  border-radius: $container-border-radius;
+
+  @each $size in $sizes {
+    &.#{$slug}--#{$size} {
+      padding: map.get($paddings, $size);
+    }
+  }
+}
