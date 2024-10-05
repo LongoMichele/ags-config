@@ -3,6 +3,15 @@ const options = {
     powreMenu: {
       name: "powermenu",
     },
+    launcher: {
+      name: "launcher",
+    },
+  },
+  services: {
+    launcher: {
+      maxResults: 5,
+      favourites: ["firefox"],
+    },
   },
   widgets: {
     workspaces: {

@@ -1,5 +1,3 @@
-import Container from "./Container";
-
 const Spacer = (name: string) =>
   Widget.EventBox({
     expand: true,
@@ -35,7 +33,7 @@ export default ({
             Spacer(name),
             Widget.Box({
               class_name: "window__inner",
-              child: Container({ child }),
+              child,
             }),
             Spacer(name),
           ],

@@ -1,0 +1,36 @@
+entry {
+  color: $input-text;
+  background-color: $input-bg;
+  padding: 0;
+  margin: 0;
+  // border: $input-border;
+  // border-radius: $input-border-radius;
+
+  image {
+    color: $input-text;
+  }
+
+  &:selected {
+    color: $input-selected-text;
+  }
+
+  &:focus {
+    color: $input-focus-text;
+    background-color: $input-focus-bg;
+    // border-color: $input-focus-border;
+
+    image {
+      color: $input-focus-text;
+    }
+  }
+
+  &:focus {
+    color: $input-hover-text;
+    background-color: $input-hover-bg;
+    // border-color: $input-hover-border;
+
+    image {
+      color: $input-hover-text;
+    }
+  }
+}

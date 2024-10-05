@@ -13,7 +13,7 @@ await Utils.execAsync([
   "gi://*",
   "--external",
   "file://*",
-]);
+]).catch((err) => console.log(err));
 
 await import(`file://${main}`);
 

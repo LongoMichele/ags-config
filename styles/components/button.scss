@@ -67,4 +67,9 @@ $props: (
     background-color: $button-active;
     border-color: $button-border-active;
   }
+
+  &:focus {
+    background-color: $button-focus;
+    border-color: $button-border-focus;
+  }
 }

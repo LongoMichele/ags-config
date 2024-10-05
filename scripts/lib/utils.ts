@@ -1,5 +1,6 @@
 import Gtk from "gi://Gtk?version=3.0";
 import Gdk from "gi://Gdk";
+import { Application } from "types/service/applications";
 
 export const forMonitors = (widget: (monitor: number) => Gtk.Window) => {
   const n = Gdk.Display.get_default()?.get_n_monitors() || 1;
@@ -48,4 +49,17 @@ export const bash = async (
     console.error(cmd, err);
     return "";
   });
+};
+
+/**
+ * run app detached
+ */
+export const launchApp = (app: Application) => {
+  const exe = app.executable
+    .split(/\s+/)
+    .filter((str) => !str.startsWith("%") && !str.startsWith("@"))
+    .join(" ");
+
+  bash(`${exe} &`);
+  app.frequency += 1;
 };

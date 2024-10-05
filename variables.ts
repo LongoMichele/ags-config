@@ -55,17 +55,32 @@ export const styles = [
   { name: "dropdown-text", value: "#D7D9D9" },
 
   // Buttons
-  { name: "button-active", value: "#3C4043" },
   { name: "button-inactive", value: "#4B545C" },
+  { name: "button-active", value: "#3C4043" },
+  { name: "button-focus", value: "#35393F" },
   { name: "button-text", value: "#D7D9D9" },
   { name: "button-border", value: "2px solid #3A3F47" },
-  { name: "button-border-radius", value: "4px" },
   { name: "button-border-active", value: "#6A7B8A" },
+  { name: "button-border-focus", value: "#6A7B8A" },
+  { name: "button-border-radius", value: "4px" },
   { name: "button-padding-xs", value: "4px 4px" },
   { name: "button-padding-s", value: "8px 12px" },
   { name: "button-padding-m", value: "16px 20px" },
   { name: "button-padding-l", value: "24px 32px" },
   { name: "button-padding-xl", value: "32px 40px" },
+
+  // Inputs (entry)
+  { "name": "input-text", "value": "#D7D9D9" },
+  { "name": "input-hover-text", "value": "#D7D9D9" },
+  { "name": "input-focus-text", "value": "#FFFFFF" },
+  { "name": "input-selected-text", "value": "#FFFFFF" },
+  { "name": "input-bg", "value": "#1C1E22" },
+  { "name": "input-hover-bg", "value": "#23272A" },
+  { "name": "input-focus-bg", "value": "#1C1E22" },
+  { "name": "input-border", "value": "5px solid #ff0000" },
+  { "name": "input-hover-border", "value": "#6A7B8A" },
+  { "name": "input-focus-border", "value": "#6A7B8A" },
+  { "name": "input-border-radius", "value": "4px" },
 
   // Container
   { name: "container-bg", value: "#1B1D23" },
