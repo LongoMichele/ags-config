@@ -20,6 +20,14 @@ $borders: (
     }
   }
 
+  &--floating {
+    background: transparent;
+
+    .#{$slug}__inner {
+      margin: $spacing-s;
+    }
+  }
+
   &__inner {
     background-color: $window-bg;
     border: $window-border;

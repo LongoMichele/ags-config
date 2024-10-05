@@ -5,6 +5,14 @@ export const clock = Variable(GLib.DateTime.new_now_local(), {
 });
 
 export const styles = [
+  // Spacing
+  { name: "spacing-xs", value: "4px" },
+  { name: "spacing-s", value: "8px" },
+  { name: "spacing-m", value: "16px" },
+  { name: "spacing-l", value: "24px" },
+  { name: "spacing-xl", value: "32px" },
+  { name: "spacing-xxl", value: "40px" },
+
   // Borders
   { name: "border-tile", value: "#4B545C" },
   { name: "border-active", value: "#3C4043" },
@@ -70,17 +78,22 @@ export const styles = [
   { name: "button-padding-xl", value: "32px 40px" },
 
   // Inputs (entry)
-  { "name": "input-text", "value": "#D7D9D9" },
-  { "name": "input-hover-text", "value": "#D7D9D9" },
-  { "name": "input-focus-text", "value": "#FFFFFF" },
-  { "name": "input-selected-text", "value": "#FFFFFF" },
-  { "name": "input-bg", "value": "#1C1E22" },
-  { "name": "input-hover-bg", "value": "#23272A" },
-  { "name": "input-focus-bg", "value": "#1C1E22" },
-  { "name": "input-border", "value": "5px solid #ff0000" },
-  { "name": "input-hover-border", "value": "#6A7B8A" },
-  { "name": "input-focus-border", "value": "#6A7B8A" },
-  { "name": "input-border-radius", "value": "4px" },
+  { name: "input-text", value: "#D7D9D9" },
+  { name: "input-hover-text", value: "#D7D9D9" },
+  { name: "input-focus-text", value: "#FFFFFF" },
+  { name: "input-selected-text", value: "#FFFFFF" },
+  { name: "input-bg", value: "#1C1E22" },
+  { name: "input-hover-bg", value: "#23272A" },
+  { name: "input-focus-bg", value: "#1C1E22" },
+  { name: "input-border", value: "2px solid #ff0000" },
+  { name: "input-hover-border", value: "#6A7B8A" },
+  { name: "input-focus-border", value: "#6A7B8A" },
+  { name: "input-border-radius", value: "4px" },
+  { "name": "input-padding-xs", "value": "4px 6px" },
+  { "name": "input-padding-s", "value": "8px 12px" },
+  { "name": "input-padding-m", "value": "12px 16px" },
+  { "name": "input-padding-l", "value": "16px 20px" },
+  { "name": "input-padding-xl", "value": "20px 24px" },
 
   // Container
   { name: "container-bg", value: "#1B1D23" },

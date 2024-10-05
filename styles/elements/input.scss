@@ -1,10 +1,20 @@
+@mixin baseProps {
+  padding: $input-padding-xs;
+  margin: 0;
+  border: $input-border;
+
+  image {
+    margin-right: $spacing-s;
+  }
+}
+
 entry {
+  @include baseProps;
   color: $input-text;
   background-color: $input-bg;
-  padding: 0;
-  margin: 0;
-  // border: $input-border;
-  // border-radius: $input-border-radius;
+  border: $input-border;
+  border-radius: $input-border-radius;
+  transition: $transition-short;
 
   image {
     color: $input-text;
@@ -14,10 +24,10 @@ entry {
     color: $input-selected-text;
   }
 
-  &:focus {
+  &:hover {
     color: $input-focus-text;
     background-color: $input-focus-bg;
-    // border-color: $input-focus-border;
+    border-color: $input-hover-border;
 
     image {
       color: $input-focus-text;
@@ -25,9 +35,10 @@ entry {
   }
 
   &:focus {
+    @include baseProps;
     color: $input-hover-text;
     background-color: $input-hover-bg;
-    // border-color: $input-hover-border;
+    border-color: $input-focus-border;
 
     image {
       color: $input-hover-text;
