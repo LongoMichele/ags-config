@@ -1,0 +1,20 @@
+@use "./variables";
+@use "./mixins";
+
+.box {
+  @include mixins.box-base;
+  padding: variables.$spacing-md;
+}
+
+.box--shadow {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.box--rounded {
+  border-radius: variables.$radius-lg;
+}
+
+.box--tight {
+  padding: variables.$spacing-sm;
+}
+

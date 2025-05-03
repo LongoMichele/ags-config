@@ -1,0 +1,21 @@
+@use "./variables";
+@use "./mixins";
+
+.btn {
+  @include mixins.button-base();
+}
+
+.btn--secondary {
+  @include mixins.button-base(variables.$color-secondary, variables.$color-fg);
+}
+
+.btn--small {
+  font-size: variables.$font-size-sm;
+  padding: variables.$spacing-xs variables.$spacing-sm;
+}
+
+.btn--large {
+  font-size: variables.$font-size-lg;
+  padding: variables.$spacing-md variables.$spacing-lg;
+}
+

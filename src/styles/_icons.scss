@@ -1,0 +1,20 @@
+@use "./variables";
+
+.icon {
+  font-family: "Hack Nerd Font";
+}
+
+.icon-sm {
+  font-family: "Hack Nerd Font";
+  font-size: variables.$icon-size-sm;
+}
+
+.icon-md {
+  font-family: "Hack Nerd Font";
+  font-size: variables.$icon-size-md;
+}
+
+.icon-lg {
+  font-family: "Hack Nerd Font";
+  font-size: variables.$icon-size-lg;
+}

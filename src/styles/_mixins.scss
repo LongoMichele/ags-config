@@ -1,0 +1,27 @@
+@use "sass:color";
+@use "./variables";
+
+@mixin box-base {
+  border-radius: variables.$radius-md;
+  background-color: variables.$color-bg;
+  color: variables.$color-fg;
+  font-family: variables.$font-family;
+  border: 1px solid variables.$color-border;
+}
+
+@mixin button-base($bg: variables.$color-primary, $fg: variables.$color-fg) {
+  @include box-base;
+  background-color: $bg;
+  color: $fg;
+  padding: variables.$spacing-sm variables.$spacing-md;
+  font-size: variables.$font-size-md;
+  transition: 0.2s;
+
+  &:hover {
+    background-color: color.adjust($bg, $lightness: -5%);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
+}
