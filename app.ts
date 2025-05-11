@@ -3,6 +3,7 @@ import style from "./src/styles/main.scss";
 import { Bar } from "./src/widgets";
 import { exec } from "astal";
 import { getOSIcon, getOSName } from "./src/services/helpers";
+import { initWorkspaces } from "./src/services/hyprland";
 
 const assetFolder = "./assets/icons";
 

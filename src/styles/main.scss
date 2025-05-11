@@ -4,6 +4,7 @@
 @use "./icons";
 @use "./mixins";
 @use "./boxes";
+@use "./services";
 
 window.Bar {
   background: transparent;
@@ -21,3 +22,4 @@ window.Bar {
     margin: 2px;
   }
 }
+

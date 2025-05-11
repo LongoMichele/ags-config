@@ -2,8 +2,6 @@ import Battery from "gi://AstalBattery";
 
 const battery = Battery.get_default();
 
-Battery.State;
-
 export const getIcon = (percentage: number, charging: boolean) => {
   if (charging) return "󰂄";
   if (percentage >= 1) return "󰁹";
